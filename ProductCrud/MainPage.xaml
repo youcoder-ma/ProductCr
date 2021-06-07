@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProductCrud.MainPage"
+             xmlns:local="clr-namespace:ProductCrud;assembly=ProductCrud"
+             xmlns:pages="clr-namespace:ProductCrud.Pages;assembly=ProductCrud"
+             Visual="Material">
+
+
+    <FlyoutItem Title="Products"
+                FlyoutDisplayOptions="AsMultipleItems"
+                Shell.TabBarIsVisible="False">
+        <ShellContent Title="Products"
+                      ContentTemplate="{DataTemplate pages:Products}"
+                      IsTabStop="True"
+                      Icon="add.png"/>
+    </FlyoutItem>
+
+    <ShellContent Title="Add Product"
+                  ContentTemplate="{DataTemplate pages:AddProduct}"
+                  IsTabStop="True"
+                  Icon="list.png"/>
+</Shell>
